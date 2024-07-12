@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <title>MOE Tamil E-book 9</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="copyright" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="noodp">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="google" value="notranslate">
+    <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+</head>
+<body class="cover">
+    <!--<div id="demo" width="1024px" height="768px" ></div>-->
+    <object type="text/html" id="demo" width="1280px" height="720px" data="assets/myPage.html"></object>
+    <style>
+        body,
+        html {
+            display: inline-block;
+            overflow: hidden!important;
+			background-color: black;
+        }
+        object {
+            padding: 0px;
+            margin: 0px;
+        },
+        /*   @media only screen and (max-width: 1024px) {
+            object {
+                transform: scale(.7) translate(-23%, -23%);
+                transition: linear;
+                position: relative;
+            }
+        }
+        @media only screen and (max-width: 716px) {
+            object {
+                transform: scale(.5) translate(-50%, -50%);
+                transition: linear;
+                position: relative;
+            }
+        }
+
+        @media only screen and (max-width: 512px) {
+            object {
+               transform: scale(0.3) translate(-120%, -120%);
+                transition: linear;
+                position: relative;
+            }
+        }*/
+    </style>
+    <script>
+        $(window).resize(function() {
+            var aRatioW, aRatioH, minWidth, minHeight, resheight;
+            var reswidth = $('#demo').outerWidth();
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            var newScaledWidth;
+            var newScaledHeight;
+            getAspectRatio();
+            getNewScale();
+            getNewLeft();
+            getNewTop();
+            $('#demo').css({
+                position: 'absolute',
+                left: newleft,
+                top: newtop
+            });
+            var newleft, newtop;
+            function getNewLeft(){
+                if(windowWidth < minWidth){
+                    newleft = (minWidth - reswidth) / 2;
+                } else {
+                    newleft = (windowWidth - reswidth) / 2;
+                }
+            }
+            function getNewTop(){
+                 if(windowHeight < minHeight){
+                    newtop =  (minHeight - resheight) / 2;
+                } else {
+                    newtop = (windowHeight - resheight) / 2;
+                }
+            }
+            function getAspectRatio() {
+                if (reswidth == 1024) {
+                    aRatioW = 4;
+                    aRatioH = 3;
+                    minWidth = 0;
+                    minHeight = 0;
+                    resheight = 768;
+                } else if (reswidth == 1280) {
+                    aRatioW = 16;
+                    aRatioH = 9;
+                    minWidth = 0;
+                    minHeight = 0;
+                    resheight = 720;
+                }
+            }
+            function minScale() {
+            }
+            function getNewScale() {
+                if (windowWidth < reswidth || windowHeight < resheight)
+                {
+                    if (windowWidth < reswidth) {
+                        if (windowWidth < minWidth) {
+                            newScaledWidth = (1 / reswidth) * minWidth;
+                        } else {
+                            newScaledWidth = (1 / reswidth) * windowWidth;
+                        }
+                    } else {
+                        newScaledWidth = 1;
+                    }
+                    if (windowHeight < resheight) {
+                        if (windowHeight < minHeight) {
+                            newScaledHeight = (1 / resheight) * minHeight;
+                        } else {
+                            newScaledHeight = (1 / resheight) * windowHeight;
+                        }
+                    } else {
+                        newScaledHeight = 1;
+                    }
+                    if (newScaledWidth < newScaledHeight) {
+                        document.getElementById("demo").style.transform = "scale(" + newScaledWidth + ")";
+                    } else if (newScaledWidth > newScaledHeight) {
+                        document.getElementById("demo").style.transform = "scale(" + newScaledHeight + ")";
+                    }
+                }
+                else if (windowWidth >= reswidth && windowHeight >= resheight)
+                {
+                    newScaledWidth = 1;
+                    document.getElementById("demo").style.transform = "scale(" + newScaledWidth + ")";
+                }
+            }
+        });
+        // To initially run the function:
+        $(window).resize();
+    </script>
+</body>
+</html>

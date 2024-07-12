@@ -1,0 +1,394 @@
+@charset "UTF-8";
+
+html {
+    image-rendering: -webkit-optimize-contrast;
+    overflow: hidden !important;
+    -webkit-backface-visibility: hidden;
+    /* add to fix webkit bug jitter */
+    -webkit-transform: perspective(1000px);
+    /* add to fix webkit bug jitter */
+}
+
+body {
+    background-color: #000000;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+img {
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    /* IE 9 */
+    -webkit-transform: translateZ(0);
+    /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+#page1vid{
+  position: absolute;
+  z-index: 9;
+ left: 630px;
+    top: 143px;
+    width: 578px;
+    height: 539px;
+  visibility: visible;
+}
+#page2vid{
+  position: absolute;
+  z-index: 9;
+    left: 611px;
+    top: 159px;
+    width: 640px;
+    height: 510px;
+  visibility: hidden;
+}
+
+#page3vid{
+  position: absolute;
+  z-index: 9;
+	left: 87px;
+    top: 159px;
+    width: 521px;
+    height: 509px;
+  visibility: hidden;
+}
+
+#page4vid{
+  position: absolute;
+  z-index: 9;
+	left: 682px;
+    top: 157px;
+    /* width: 910px; */
+    height: 510px;
+  visibility: hidden;
+}
+
+#page5vid{
+  position: absolute;
+  z-index: 9;
+    left: 68px;
+    top: 159px;
+    width: 559px;
+    height: 510px;
+  visibility: hidden;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #66573b;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+span{
+    color: black;
+    font-size: 15.7px;
+}
+
+.backgroundImage{
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    z-index: 0;
+    visibility: hidden;
+}
+
+#page1{
+      visibility: visible;
+}
+
+#timeSlider {
+  position: absolute;
+  left: -5px;
+  top: -195px;
+  width: 280px;
+  height: 15px;
+}
+
+#playBtn {
+  position: absolute;
+  background-image: url(ui/play.png);
+  top: -262px;
+  left: 38px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#replayBtn{
+    position: absolute;
+    background-image: url(ui/replay.png);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    left: 193px;
+    top: -262px;
+    cursor: pointer;
+}
+
+#pauseBtn {
+  position: absolute;
+  background-image: url(ui/pause.png);
+  top: -262px;
+  left: 116px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#prevBtn {
+  position: absolute;
+  background-image: url(ui/previous.png);
+  top: -262px;
+  left: -437px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#nextBtn {
+  position: absolute;
+  background-image: url(ui/next.png);
+  top: -262px;
+  left: 669px;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#controls {
+  position: absolute;
+  left: 500px;
+  top: 300px;
+}
+
+p {
+  color: white;
+  margin: 5px;
+}
+
+.readingText{
+  position: absolute;
+  top: 175px;
+  width: 525px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+}
+
+#Page3{
+  left: 100px;
+}
+
+#Page4{
+  left: 650px;
+}
+
+#Page5{
+  left: 100px;
+}
+
+#Page6{
+  left: 650px;
+}
+
+#Page7{
+  left: 100px;
+}
+
+#Page8{
+  left: 650px;
+}
+
+#Page9{
+  left: 100px;
+}
+
+#Page10{
+  left: 650px;
+}
+
+#Page11{
+  left: 100px;
+}
+
+#Page12{
+  left: 650px;
+}
+
+#Page13{
+  left: 100px;
+}
+
+#Page14{
+  left: 650px;
+}
+
+#Page15{
+  left: 100px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+z-index: 10000000;
+  left: 262px;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal2 {
+
+  position: absolute; /* Stay in place */
+ /* Sit on top */
+ /* Location of the box */
+width:100%;
+z-index: 10000000;
+   left: -275px;
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal3 {
+ display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+ z-index: 10000000;
+ left: 262px;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal4 {
+
+  position: absolute; /* Stay in place */
+z-index: 10000000;
+width:100%;
+
+   left: -275px;
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  
+}
+.modal-content2 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  
+}
+.modal-content3 {
+ background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  
+  
+}
+.modal-content4 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close3 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close4 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close3:hover,
+.close3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

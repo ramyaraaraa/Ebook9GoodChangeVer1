@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width">
+<title>Ebook</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<audio id="title">
+  <source src="audio/Title.mp3" type="audio/mp3">
+</audio>
+<audio id="apg34">
+  <source src="audio/34.mp3" type="audio/mp3">
+</audio>
+<audio id="apg56">
+  <source src="audio/56.mp3" type="audio/mp3">
+</audio>
+<audio id="apg78">
+  <source src="audio/78.mp3" type="audio/mp3">
+</audio>
+<audio id="apg910">
+  <source src="audio/910.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1112">
+  <source src="audio/1112.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1314">
+  <source src="audio/1314.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1516">
+  <source src="audio/1516.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1718">
+  <source src="audio/1718.mp3" type="audio/mp3">
+</audio>
+<audio id="apg1920">
+  <source src="audio/1920.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2122">
+  <source src="audio/2122.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2324">
+  <source src="audio/2324.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2526">
+  <source src="audio/2526.mp3" type="audio/mp3">
+</audio>
+<audio id="apg2728">
+  <source src="audio/2728.mp3" type="audio/mp3">
+</audio>
+<video id="page1vid" class="animation" width="320" height="240" loop="true" autoplay muted>
+  <source src="video/Title Page.mp4" type="video/mp4">
+</video>
+<video id="page2vid" class="animation "   loop="true" autoplay>
+  <source src="video/Page_2.mp4" type="video/mp4">
+</video>
+<video id="page3vid" class="animation" width="320" height="240" loop="true" autoplay>
+  <source src="video/Page_3.mp4" type="video/mp4">
+</video>
+<video id="page4vid" class="animation"  loop="true" autoplay>
+  <source src="video/Page_4.mp4" type="video/mp4">
+</video>
+	<video id="page5vid" class="animation" width="320" height="240" loop="true" autoplay>
+  <source src="video/Page_5.mp4" type="video/mp4">
+</video>
+	
+	
+	<img id="page1" class="backgroundImage" src="pages/book9pg01.png"/>
+	<img id="page2" class="backgroundImage" src="pages/book9pg02.png"/>
+	<img id="page3" class="backgroundImage" src="pages/book9pg03.png"/> 
+	<img id="page4" class="backgroundImage" src="pages/book9pg04.png"/> 
+	<img id="page5" class="backgroundImage" src="pages/book9pg05.png"/> 
+	<img id="page6" class="backgroundImage" src="pages/book9pg06.png"/> 
+	<img id="page7" class="backgroundImage" src="pages/book9pg07.png"/> 
+	<img id="page8" class="backgroundImage" src="pages/book9pg17.png"/>
+
+	
+<div id="controls">
+  <input type="range" id="timeSlider" value="0" min="0" step="1" class="slider">
+  <div id="playBtn" onclick="PlayAudio()"></div>
+  <div id="pauseBtn" onclick="PauseAudio()"></div>
+  <div id="replayBtn" onclick="Replay()"></div>
+  <div id="prevBtn" onclick="GoPrev()"></div>
+  <div id="nextBtn" onclick="GoNext()"></div>
+</div>
+<div id="Page3" class="readingText">
+  <div id="myModal" class="modal" >
+    <div class="modal-content"> <span class="close">&times;</span> <img id="pic" src="pages/page_01.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence1">“அம்மா வீட்டில் இருக்காங்க.</span> 
+  <span id="sentence1a">பிறகு பேசறேன்,”</span> 
+  <span id="sentence2">என்று மெல்லிய குரலில்</span> 
+  <span id="sentence2a">மாலதி கூறியது</span> 
+  <span id="sentence2b">அவள் தாயாரின் காதிலும் விழுந்துவிட்டது.</span> 
+  </p>
+  <p> 
+  <span id="sentence3">“யாரும்மா தொலைபேசியில?”</span> 
+  <span id="sentence3a">தாயின் குரலில்</span> 
+  <span id="sentence3b">லேசான <a href="#" id="myBtn_1">பதற்றம்</a> இருந்ததை மாலதி கவனித்தாளா?</span> 
+  <span id="sentence3c">தெரியவில்லை.</span> 
+  </p>
+  <p> 
+  <span id="sentence4">“எங்கூடப் படிக்கும் பிருந்தாதாம்மா.</span> 
+  <span id="sentence4a">நான் பிறகு பேசறேன்னு சொல்லிட்டேன்.”</span>
+  </p>
+  <p> 
+  <span id="sentence5">“உங்கூடப் படிக்கிற தோழினா</span> 
+  <span id="sentence5a">ஏன் தொடர்ந்து பேசல்ல?</span> 
+  <span id="sentence5b">பேச வேண்டியதுதானே!</span> 
+  <span id="sentence6">நான் வேண்டாம்னா</span> 
+  <span id="sentence6a">சொல்லப் போறேன்?”</span> 
+  </p>
+  <p> 
+  <span id="sentence7">“இல்லம்மா அவ பேசினா உடனே வைக்க மாட்டா. </span> 
+  <span id="sentence7a">நேரம் காலம் தெரியாமல் பேசிக்கிட்டிருப்பா.</span>
+  <span id="sentence7b">எனக்கு வீட்டுப்பாடம் இருக்கு.”</span>
+  </p>
+  <p> 
+  <span id="sentence8">“சரி... சரி... </span> 
+  <span id="sentence8a">வீட்டுப்பாடத்தைச் செய்யும்மா,”</span> 
+  <span id="sentence8b">என்று சொல்லிவிட்டுச் சென்ற</span> 
+  <span id="sentence8c">மாலதியின் தாயாருக்கு</span> 
+  <span id="sentence8d">மகள்மீது <a href="#" id="myBtn_2">நம்பிக்கை</a> இருந்தாலும் </span> 
+   <span id="sentence9">ஒரு மூலையில்</span> 
+  <span id="sentence9a">சிறியதாக</span> 
+  <span id="sentence9b">ஒரு சந்தேகமும் துளிர்விட்டது.</span> 
+  </p>
+  
+</div>
+<div id="Page4" class="readingText">
+  <div id="myModal2" class="modal2" >
+    <div class="modal-content2"> <span class="close2">&times;</span> <img id="pic2" src="pages/page_03.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence10">“நம்ம பொண்ணு <a href="#" id="myBtn_3">நடவடிக்கையில</a></span> 
+  <span id="sentence10a">எனக்குச் சந்தேகமா இருக்குங்க. </span> 
+  <span id="sentence11">நேத்து அவ யாருக்கிட்டையோ</span> 
+  <span id="sentence11a">தொலைபேசியில பேசிக்கிட்டு இருந்தா.</span> 
+  <span id="sentence12">என்னைப் பார்த்ததும்</span>
+  <span id="sentence12a">அந்த இணைப்பைத் துண்டிச்சிட்டா,”</span> 
+  <span id="sentence12b">என்று மாலதியின் தாய்</span> 
+  <span id="sentence12c">தம் கணவரிடம் கவலையோடு கூறினார்.</span> 
+  </p> 
+  <p> 
+  <span id="sentence13">“சந்தேகம் இருந்தால்</span> 
+  <span id="sentence13a">அவக்கிட்டேயே கேட்டுவிடேன். </span> 
+  <span id="sentence14">எல்லோருக்கும் நிம்மதியா இருக்கும்,”</span>
+  <span id="sentence14a">என்றார் மாலதியின் தந்தை.</span>
+  </p> 
+  <p> 
+  <span id="sentence15">அன்று பணிப்பெண்</span> 
+  <span id="sentence15a">லட்சுமியும் மாலதியும் </span> 
+  <span id="sentence15b">பேசிக்கொண்டிருந்ததை </span> 
+  <span id="sentence16">மாலதியின் தாய்</span> 
+  <span id="sentence16a"><a href="#" id="myBtn_4">தற்செயலாகக்</a> கேட்க நேர்ந்தது.</span> 
+  </p> 
+  <p> 
+  <span id="sentence17">“அம்மாவுக்குத் தெரிந்தால் திட்டுவாங்க,”</span>
+  <span id="sentence17a">என்றார் லட்சுமி.</span>
+  </p> 
+  <p> 
+  <span id="sentence18">“நீங்க கவலப்படாதீங்க.</span> 
+  <span id="sentence18a">நான் பார்த்துக்கிறேன்,”</span>
+  <span id="sentence19">என்றாள் மாலதி. </span> 
+  </p>  
+  <p> 
+  <span id="sentence20">‘ஏதோ பெரிய விஷயத்தை</span> 
+  <span id="sentence20a">இருவரும் சேர்ந்து மறைக்கிறார்கள். </span>
+  <span id="sentence21">பணிப்பெண்ணுக்குத் தெரிந்த விஷயம்</span> 
+  <span id="sentence21a">நமக்குத் தெரியாமல் போய்விட்டதே!</span>
+  <span id="sentence22">இன்று இதற்கு ஒரு முடிவு</span> 
+  <span id="sentence22a">கட்டிவிட வேண்டும்,’</span> 
+  <span id="sentence22b">என்று நினைத்தார்</span> 
+  <span id="sentence22c">மாலதியின் தாயார்.</span> 
+  </p>
+</div>
+<div id="Page5" class="readingText">
+  <div id="myModal3" class="modal3" >
+    <div class="modal-content3"  > <span class="close3">&times;</span> <img id="pic3" src="pages/page_05.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence23">“மாலதி! இங்க வா.</span> 
+  <span id="sentence23a">நீயும் லட்சுமியும் பேசிக்கிட்டிருந்ததை</span> 
+  <span id="sentence23b">நான் கேட்டுக்கிட்டுத்தான் இருந்தேன்.</span>
+  <span id="sentence23c">எங்களுக்குத் தெரியாம</span>
+  <span id="sentence23d">நீ எதையோ மறைக்கிற.</span>
+  <span id="sentence23e">என்ன அது?”</span>
+  </p>
+  <p>   
+  <span id="sentence24">“அம்மா, என்ன மன்னிச்சிடுங்க.</span> 
+  <span id="sentence24a">லட்சுமி</span> 
+  <span id="sentence24b">அக்காவுக்கு நம்ம வீட்டில </span> 
+  <span id="sentence24c"><a href="#" id="myBtn_5">கைத்தொலைபேசி</a> வைத்துக்கொள்ள</span> 
+  <span id="sentence24d">அனுமதி இல்லை.</span> 
+  <span id="sentence25">வாரத்தில் ஒருநாள் மட்டும்</span> 
+  <span id="sentence25a">தொலைபேசியக் கொடுத்து</span> 
+  <span id="sentence25b">ஊருக்குப் பேசச் சொல்றோம்.</span> 
+  </p>
+  <p> 
+  <span id="sentence26">நம்ம எல்லாருக்கும் முன்னால</span> 
+  <span id="sentence26a">எல்லா விஷயங்களையும்</span> 
+  <span id="sentence26b">பேச முடியுமா? </span> 
+  <span id="sentence27">அக்காவுக்கும் தேவை ஏற்படும்போது</span> 
+  <span id="sentence27a">தனிமையில் பேசப் பல செய்திகள் இருக்குமே!</span> 
+  <span id="sentence27b">அதனால என்னோட கைத்தொலைபேசியை</span>   
+  <span id="sentence27c">எப்பவாவது அவங்களுக்குப் பேசக் கொடுப்பேன்.</span> 
+  <span id="sentence28">ஏதாவது முக்கியமான செய்தி என்றால்</span> 
+  <span id="sentence28a">அவங்க அப்பாவும்</span> 
+  <span id="sentence28b">என்னோட கைத்தொலைபேசியில தொடர்புகொள்வாரு.</span>
+  <span id="sentence29">நீங்க நேத்துக் கேட்டபோது</span> 
+  <span id="sentence29a">என் தோழி </span> 
+  <span id="sentence29b">பேசியதாகச் சொன்னது அதனாலதான். </span> 
+  <span id="sentence29c">இது தப்புன்னா என்னை மன்னிச்சிடுங்க.”</span>
+  <span id="sentence30">மாலதியின் வார்த்தைகளில்</span>   
+  <span id="sentence30a">வருத்தம் தோய்ந்திருந்தது.</span> 
+  </p>
+</div>
+<div id="Page6" class="readingText">
+  <div id="myModal4" class="modal4" >
+    <div class="modal-content4"  > <span class="close4">&times;</span> <img id="pic4" src="pages/page_06.jpg" width="100%" height="auto"/> </div>
+  </div>
+  <p> 
+  <span id="sentence31">“நீ செய்தது தப்பில்லம்மா.</span> 
+  <span id="sentence32">இதற்கு முன்னால லட்சுமியிடம் </span> 
+  <span id="sentence33">கைத்தொலைபேசி இருந்தது. </span>
+  <span id="sentence34">நேரம், </span>
+  <span id="sentence35">காலம் தெரியாம பேசினா; </span> 
+  <span id="sentence36">இரவு நேரம்</span>
+  <span id="sentence36a">தாமதமாகத் தூங்கினா. </span>  
+  <span id="sentence37">அவளால காலையில்</span> 
+  <span id="sentence37a">நேரத்தோடு எழ முடியல;</span> 
+  <span id="sentence38">வேலைகளையும் </span>
+  <span id="sentence38a">நேரத்தோடு முடிக்க முடியல.</span> 
+  <span id="sentence39">அதனால,</span> 
+  <span id="sentence39a">லட்சுமிதான் கைத்தொலைபேசிய</span> 
+  <span id="sentence39b">எங்கிட்ட கொடுத்து</span> 
+  <span id="sentence39c">வைத்துக்கொள்ளும்படி சொன்னா. </span> 
+  <span id="sentence40">இனிமேல் கைத்தொலைபேசியைத்</span> 
+  <span id="sentence40a">தேவை ஏற்படும்போது மட்டும் </span> 
+  <span id="sentence40b">பயன்படுத்துவான்னு நம்பலாம். </span>
+  <span id="sentence41">லட்சுமிக்கு</span>
+  <span id="sentence41a">அவ கைத்தொலைபேசிய கொடுத்துடுறேன்.”</span>
+  </p>
+  <p>
+  <span id="sentence42">தன் தாயார் கூறியதைக் கேட்டதும் </span> 
+  <span id="sentence42a">மாலதிக்கு மிகவும்</span> 
+  <span id="sentence42b">மகிழ்ச்சியாக இருந்தது. </span> 
+  <span id="sentence43">இதை அறிந்த லட்சுமியும்</span> 
+  <span id="sentence43a"><a href="#" id="myBtn_6">அகமகிழ்ந்தாள்.</a></span> 
+  </p>
+</div>
+
+<script>
+		  var dummystore=0
+		   var modal = document.getElementById("myModal");
+		   var modal2 = document.getElementById("myModal2");
+		  var modal3 = document.getElementById("myModal3");
+		   var modal4 = document.getElementById("myModal4");
+		  var btn1 = document.getElementById("myBtn_1");
+		  var btn2 = document.getElementById("myBtn_2");
+		  var btn3 = document.getElementById("myBtn_3");
+		  var btn4 = document.getElementById("myBtn_4");
+		  var btn5 = document.getElementById("myBtn_5");
+		  var btn6 = document.getElementById("myBtn_6");
+		  var span = document.getElementsByClassName("close")[0];
+		    var span2 = document.getElementsByClassName("close2")[0];
+		   var span3 = document.getElementsByClassName("close3")[0];
+		   var span4 = document.getElementsByClassName("close4")[0];
+		  
+		  
+		  btn1.onclick = function() {
+			 dummystore=1;
+			  document.getElementById("pic").src= "pages/page_01.jpg";
+  			modal.style.display = "block";
+		  	}
+		  
+		  		  btn2.onclick = function() {
+			  		dummystore=2;
+					document.getElementById("pic").src= "pages/page_02.jpg";
+  					modal.style.display = "block";
+				  	}
+				  
+				    btn3.onclick = function() {
+			 dummystore=1;
+			  document.getElementById("pic2").src= "pages/page_03.jpg";
+  			modal2.style.display = "block";
+		  	}
+		  
+		  		  btn4.onclick = function() {
+			  		dummystore=2;
+					document.getElementById("pic2").src= "pages/page_04.jpg";
+  					modal2.style.display = "block";
+				  	}
+				  
+				   btn5.onclick = function() {
+			 dummystore=1;
+			  document.getElementById("pic3").src= "pages/page_05.jpg";
+  			modal3.style.display = "block";
+		  	}
+		  
+		  		  btn6.onclick = function() {
+			  		dummystore=2;
+					document.getElementById("pic4").src= "pages/page_06.jpg";
+  					modal4.style.display = "block";
+				  	}
+				  
+
+
+									
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span2.onclick = function() {
+
+	modal2.style.display = "none";
+	
+}
+span3.onclick = function() {
+ 
+	modal3.style.display = "none";
+}
+span4.onclick = function() {
+ 
+	modal4.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+	
+  if (event.target == modal) {
+    modal.style.display = "none";
+	   modal2.style.display = "none";
+	   modal3.style.display = "none";
+	   modal4.style.display = "none";
+  }
+}
+	  </script> 
+<script src="js/script.js"></script>
+</body>
+</html>
